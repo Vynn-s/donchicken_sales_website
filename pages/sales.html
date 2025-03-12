@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales - Chicken Store</title>
+    <link rel="stylesheet" href="../css/sales.css" />
+    <!-- Add this in the head section -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Replace your current navbar -->
+      <header class="navbar">
+        <div class="nav-left">
+          <button id="menuToggle" class="menu-toggle">
+            <i class="ri-menu-line"></i>
+          </button>
+          <div class="logo">
+            <img
+              src="../assets/images/chicken-logo.png"
+              class="chicken-logo"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <nav id="mainNav" class="main-nav">
+          <ul>
+            <li><a href="home.html">Dashboard</a></li>
+            <li><a href="#" class="active">Sales</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="employees.html">Employees</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-right">
+          <button id="themeToggle">🌙</button>
+          <div class="user-profile">
+            <a href="profile.html"
+              ><img src="../assets/images/client2.jpg" alt="User"
+            /></a>
+          </div>
+        </div>
+      </header>
+
+      <div class="user-info-banner">
+        <div class="info-item">
+          <i class="ri-time-line"></i>
+          <span id="currentDateTime"></span>
+        </div>
+        <div class="info-item">
+          <i class="ri-user-line"></i>
+          <span id="currentUser"></span>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content" id="mainContent">
+        <!-- Header -->
+        <header class="header">
+          <h1>Sales</h1>
+          <p>Manage your sales here.</p>
+        </header>
+
+        <!-- Product Cards -->
+        <div class="product-cards">
+          <!-- Row 1 -->
+          <div class="product-card">
+            <img src="../assets/images/special1.png" alt="Chicken" />
+            <h3>Chicken</h3>
+            <p>₱33 per piece</p>
+            <div class="quantity-controls">
+              <button class="minus-btn" data-product="chicken">-</button>
+              <span class="quantity" data-product="chicken">0</span>
+              <button class="plus-btn" data-product="chicken">+</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="../assets/images/soda-bottle.png" alt="Drink" />
+            <h3>Drink</h3>
+            <p>₱20 per bottle</p>
+            <div class="quantity-controls">
+              <button class="minus-btn" data-product="drink">-</button>
+              <span class="quantity" data-product="drink">0</span>
+              <button class="plus-btn" data-product="drink">+</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="../assets/images/rice.png" alt="Rice" />
+            <h3>Rice</h3>
+            <p>₱10 per meal</p>
+            <div class="quantity-controls">
+              <button class="minus-btn" data-product="rice">-</button>
+              <span class="quantity" data-product="rice">0</span>
+              <button class="plus-btn" data-product="rice">+</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="../assets/images/atsara.png" alt="Atsara" />
+            <h3>Atsara</h3>
+            <p>₱15 per pack</p>
+            <div class="quantity-controls">
+              <button class="minus-btn" data-product="atsara">-</button>
+              <span class="quantity" data-product="atsara">0</span>
+              <button class="plus-btn" data-product="atsara">+</button>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="product-card">
+            <img src="../assets/images/empanada.png" alt="Empanada" />
+            <h3>Empanada</h3>
+            <p>₱15 per piece</p>
+            <div class="quantity-controls">
+              <button class="minus-btn" data-product="empanada">-</button>
+              <span class="quantity" data-product="empanada">0</span>
+              <button class="plus-btn" data-product="empanada">+</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="../assets/images/soy.png" alt="Soy" />
+            <h3>Soy</h3>
+            <p>₱15 per slice</p>
+            <div class="quantity-controls">
+              <button class="minus-btn" data-product="soy">-</button>
+              <span class="quantity" data-product="soy">0</span>
+              <button class="plus-btn" data-product="soy">+</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="../assets/images/chicken-neck.png" alt="S-box" />
+            <h3>Neck</h3>
+            <p>₱40 per scoop</p>
+            <div class="quantity-controls">
+              <button class="minus-btn" data-product="neck">-</button>
+              <span class="quantity" data-product="neck">0</span>
+              <button class="plus-btn" data-product="neck">+</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="../assets/images/mango-float.png" alt="mango_float" />
+            <h3>Mango Float</h3>
+            <p>₱120 per bowl</p>
+            <div class="quantity-controls">
+              <button class="minus-btn" data-product="mango_float">-</button>
+              <span class="quantity" data-product="mango_float">0</span>
+              <button class="plus-btn" data-product="mango_float">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Total Price -->
+        <div class="total-price">
+          <h3>₱ <span id="totalPrice">0</span></h3>
+        </div>
+
+        
+        <!-- Submit Button -->
+        <div class="submit-section">
+          <button class="addCustomItem" id="addCustomItem">
+            Add Custom Item
+          </button>
+          <button class="submitSale" id="submitSale">Submit Sale</button>
+        </div>
+
+        <!-- Custom Item Modal -->
+        <div id="customItemModal" class="modal">
+          <div class="modal-content">
+            <h2>Add Custom Item</h2>
+            <form id="customItemForm">
+              <label for="customItemName">Item Name:</label>
+              <input type="text" id="customItemName" required />
+
+              <label for="customItemPrice">Price:</label>
+              <input type="number" id="customItemPrice" min="0" required />
+
+              <label for="customItemQuantity">Quantity:</label>
+              <input type="number" id="customItemQuantity" min="1" required />
+
+              <div class="modal-buttons">
+                <button type="submit">Add Item</button>
+                <button type="button" id="closeCustomItemModal">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Log Table -->
+        <div class="log-table">
+          <h3>Sales Log</h3>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Unit Price</th>
+                  <th>Quantity</th>
+                  <th>Total Price</th>
+                  <th>Timestamp</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody id="logBody">
+                <!-- Empty State Row -->
+                <tr id="emptyState">
+                  <td colspan="8">No sales recorded yet.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+      <div class="modal-content">
+        <h2>Confirm Sale</h2>
+        <p>Are you sure you want to submit this sale?</p>
+        <div class="modal-buttons">
+          <button id="confirmSale">Yes</button>
+          <button id="cancelSale">No</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Update Modal -->
+    <div id="updateModal" class="modal">
+      <div class="modal-content">
+        <h2>Update Sale</h2>
+        <form id="updateForm">
+          <label for="updateItem">Item:</label>
+          <input type="text" id="updateItem" required />
+          <label for="updatePrice">Unit Price:</label>
+          <input type="number" id="updatePrice" min="0" required />
+          <label for="updateQuantity">Quantity:</label>
+          <input type="number" id="updateQuantity" min="0" required />
+          <div class="modal-buttons">
+            <button type="submit">Update</button>
+            <button type="button" id="closeUpdateModal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div id="successPopup" class="success-popup">
+      <div class="success-content">
+        <div class="checkmark">✔</div>
+        <p>Items logged successfully!</p>
+      </div>
+    </div>
+
+    <script src="../js/sales.js"></script>
+  </body>
+</html>

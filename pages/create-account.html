@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account - Chicken Store</title>
+  <link rel="stylesheet" href="../css/create-account.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="theme-toggle">
+      <button id="themeToggle">🌙</button>
+    </div>
+    <div class="login-header">
+      <img src="../assets/images/chicken-logo.png" alt="Chicken Store Logo" class="logo">
+      <h1>Create Account</h1>
+      <p>Make an <b>Admin/Staff</b> Account</p>
+    </div>
+    <form id="createAccountForm" class="login-form">
+      <div id="signUpMessage" class="messageDiv"></div>
+      <div class="input-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+      </div>
+      <div class="input-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="login-button" id="signUp">Create Account</button>
+      <p class="create-account">Already have an account? <a href="../index.html">Login</a></p>
+    </form>
+  </div>
+
+  <script src="../js/create-account.js"></script>
+  <script>
+    // Theme Toggle Script
+    document.getElementById('themeToggle').addEventListener('click', function() {
+      document.body.classList.toggle('light-mode');
+      // Update the button text based on the current mode
+      const isLightMode = document.body.classList.contains('light-mode');
+      this.textContent = isLightMode ? '🌞' : '🌙';
+    });
+  </script>
+</body>
+</html>

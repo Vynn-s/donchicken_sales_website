@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees - Don Eking Chicken Store</title>
+    <link rel="stylesheet" href="../css/employees.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-left">
+        <button id="menuToggle" class="menu-toggle">
+          <i class="ri-menu-line"></i>
+        </button>
+        <div class="logo">
+          <img
+            src="../assets/images/chicken-logo.png"
+            class="chicken-logo"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <nav id="mainNav" class="main-nav">
+        <ul>
+          <li><a href="home.html">Dashboard</a></li>
+          <li><a href="sales.html">Sales</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="#" class="active">Employees</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <button id="themeToggle">🌙</button>
+        <div class="user-profile">
+          <a href="profile.html"
+            ><img src="../assets/images/client2.jpg" alt="User"
+          /></a>
+        </div>
+      </div>
+    </header>
+
+    <div class="user-info-banner">
+      <div class="info-item">
+        <i class="ri-time-line"></i>
+        <span id="currentDateTime"></span>
+      </div>
+      <div class="info-item">
+        <i class="ri-user-line"></i>
+        <span id="currentUser"></span>
+      </div>
+    </div>
+
+    <main class="dashboard">
+      <section class="employees-section">
+        <div class="section-header">
+          <h2>Employees Management</h2>
+          <button id="addEmployeeBtn" class="add-btn">
+            <i class="ri-user-add-line"></i> Add Employee
+          </button>
+        </div>
+
+        <div class="employees-grid">
+          <!-- Employee cards will be added here dynamically -->
+        </div>
+      </section>
+
+      <!-- Add Employee Modal -->
+      <div id="employeeModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Add New Employee</h3>
+            <button class="close-btn">&times;</button>
+          </div>
+          <form id="employeeForm">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+            <div class="form-group">
+              <label for="position">Position</label>
+              <select id="position" name="position" required>
+                <option value="">Select Position</option>
+                <option value="Manager">Manager</option>
+                <option value="Cashier">Cashier</option>
+                <option value="Cook">Cook</option>
+                <option value="Server">Server</option>
+                <option value="Cleaner">Cleaner</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="shift">Shift</label>
+              <select id="shift" name="shift" required>
+                <option value="">Select Shift</option>
+                <option value="Morning">Morning (6 AM - 2 PM)</option>
+                <option value="Afternoon">Afternoon (2 PM - 10 PM)</option>
+                <option value="Night">Night (10 PM - 6 AM)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="submit-btn">Add Employee</button>
+              <button type="button" class="cancel-btn">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Update your password modal HTML -->
+      <div id="passwordModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Admin Verification Required</h3>
+            <button class="close-btn">&times;</button>
+          </div>
+          <form id="passwordVerificationForm">
+            <div class="form-message"></div>
+            <!-- Add this line -->
+            <div class="form-group">
+              <label for="adminPassword">Enter Admin Password</label>
+              <input
+                type="password"
+                id="adminPassword"
+                name="adminPassword"
+                required
+              />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="submit-btn">Verify & Delete</button>
+              <button type="button" class="cancel-btn">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/employees.js"></script>
+  </body>
+</html>

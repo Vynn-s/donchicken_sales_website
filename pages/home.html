@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Don Eking Chicken Store</title>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-left">
+        <img src="../assets/images/chicken-logo.png" class="logo" alt="Logo" />
+        <button id="menuToggle" class="menu-toggle">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+    
+      <nav id="mainNav">
+        <ul>
+          <li><a href="#" class="active">Dashboard</a></li>
+          <li><a href="sales.html">Sales</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="employees.html">Employees</a></li>
+        </ul>
+      </nav>
+    
+      <div class="nav-right">
+        <button id="themeToggle" class="theme-toggle">
+          <i class="ri-moon-line"></i>
+        </button>
+        <div class="user-profile">
+          <a href="profile.html"><img src="../assets/images/client2.jpg" alt="User Profile" /></a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container header__container" id="home">
+      <div class="header__image">
+        <img src="../assets/images/header.png" alt="header" />
+      </div>
+      <div class="header__content">
+        <h1>Savor the Crispy <span>Perfection.</span></h1>
+        <p class="section__description">
+          Meet, eat, and enjoy the perfect blend of crispy, juicy goodness in
+          every bite!
+        </p>
+        <p class="section__description-2">
+          Satisfy your cravings with our secret recipe that's been crafted to
+          perfection. From the golden-brown crust to the tender, succulent meat
+          inside, Don Ekings Fried Chicken is your go-to choice for a delightful
+          meal.
+        </p>
+      </div>
+    </section>
+
+    <main class="dashboard">
+      <section class="stats">
+        <div></div>
+        <div class="card">
+          <h3>Branches</h3>
+          <p>15 branches</p>
+        </div>
+        <div class="card">
+          <h3>History</h3>
+          <p>8 years</p>
+        </div>
+      </section>
+
+      <div class="last-week-sale">
+        <h2>Recent Sales</h2>
+      </div>
+
+      <section class="recent-orders">
+        <div class="orders-header">
+          <div class="sales-summary">
+            <div class="summary-item">
+              <span class="label">Total Sales</span>
+              <span class="value" id="totalSalesAmount">₱0.00</span>
+            </div>
+            <div class="summary-item">
+              <span class="label">Orders</span>
+              <span class="value" id="totalOrders">0</span>
+            </div>
+          </div>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="recentSalesTable">
+              <tr>
+                <td colspan="7" class="loading-message">Loading recent sales...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="special__container" id="special">
+        <h2 class="section__header">Don Eking's Best Sellers</h2>
+        <p class="section__description-menu">
+            Indulge in the crispy, juicy perfection of our signature fried chicken—where 
+            tradition meets flavor in every bite. Taste the best, only at Don Eking!
+        </p>
+        <div class="special__grid">
+            <div class="special__card">
+                <img src="../assets/images/special3.png" alt="special" />
+                <h4>Don Eking Fried Chicken</h4>
+                <p>
+                    Crispy, golden-brown perfection—juicy on the inside, crunchy on the outside. A true fried chicken delight!
+                </p>
+                <div class="special__ratings">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                </div>
+                <div class="special__footer">
+                    <p class="price">₱35.00</p>
+                </div>
+            </div>
+            <div class="special__card">
+                <img src="../assets/images/special2.png" alt="special" />
+                <h4>Budget Meal Fried Chicken with Rice</h4>
+                <p>
+                    Crispy fried chicken served with fluffy rice—delicious, satisfying, and budget-friendly!
+                </p>
+                <div class="special__ratings">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                </div>
+                <div class="special__footer">
+                    <p class="price">₱45.00</p>
+                </div>
+            </div>
+            <div class="special__card">
+                <img src="../assets/images/special3.png" alt="special" />
+                <h4>Bulk Orders</h4>
+                <p>
+                    Enjoy Don Eking's crispy fried chicken in bulk—perfect for gatherings, events, and packed meals!
+                </p>
+                <div class="special__ratings">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                </div>
+                <div class="special__footer">
+                    <p class="price"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <section class="client__container" id="client">
+        <div class="client__text">
+          <h2 class="section__header">Meet the Developers & Programmers</h2>
+          <p class="section__description">
+            We are InfoSphere, a team of second-year BS Information Systems students from Mapúa Malayan Colleges Mindanao. 
+            Our mission is to enhance your business operations by developing innovative digital solutions tailored to your needs, ensuring efficiency and effectiveness in solving your company's challenges.
+          </p>
+        </div>
+        <div class="client__swiper">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="client__card">
+                  <img src="../assets/images/client1.jpg" alt="client" />
+                  <h4>Nepthali II C. Sollano</h4>
+                  <h5>System Designer & Documentation In-Charge</h5>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="client__card">
+                  <img src="../assets/images/client2.jpg" alt="client" />
+                  <h4>Jervin Andoy</h4>
+                  <h5>Full Stack Developer & Documentation In-Charge</h5>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="client__card">
+                  <img src="../assets/images/client3.jpg" alt="client" />
+                  <h4>Francis Elixer M. Tupaz</h4>
+                  <h5>Project Manager & Database Administrator</h5>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/home.js"></script>
+  </body>
+</html>

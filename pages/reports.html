@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reports - Don Eking Chicken Store</title>
+    <link rel="stylesheet" href="../css/reports.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Update the navbar section in reports.html -->
+    <header class="navbar">
+      <div class="nav-left">
+        <div class="logo">
+          <img
+            src="../assets/images/chicken-logo.png"
+            class="chicken-logo"
+            alt=""
+          />
+        </div>
+        <button id="menuToggle" class="menu-toggle">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+
+      <nav id="mainNav" class="main-nav">
+        <ul>
+          <li><a href="home.html">Dashboard</a></li>
+          <li><a href="sales.html">Sales</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="employees.html">Employees</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <button id="themeToggle">🌙</button>
+        <div class="user-profile">
+          <a href="profile.html"
+            ><img src="../assets/images/client2.jpg" alt="User"
+          /></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <section class="charts-section">
+        <div class="chart-card">
+          <h3>Sales Distribution by Category</h3>
+          <div class="chart-info">
+            <div class="total-sales">
+              Total Sales: <span id="totalSalesAmount">₱0.00</span>
+            </div>
+            <div class="chart-legend" id="customLegend"></div>
+          </div>
+          <div class="chart-container">
+            <canvas id="categoryPieChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="sales-log">
+        <div class="log-header">
+          <h2>Sales Log</h2>
+          <div class="filter-controls">
+            <div class="search-box">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search sales..."
+              />
+              <i class="ri-search-line"></i>
+            </div>
+            <div class="filter-group">
+              <select id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="chicken">Chicken</option>
+                <option value="drink">Drink</option>
+                <option value="rice">Rice</option>
+                <option value="atsara">Atsara</option>
+                <option value="empanada">Empanada</option>
+                <option value="soy">Soy</option>
+                <option value="neck">Neck</option>
+                <option value="mango_float">Mango Float</option>
+              </select>
+              <select id="dateFilter">
+                <option value="">All Time</option>
+                <option value="today">Today</option>
+                <option value="week">This Week</option>
+                <option value="month">This Month</option>
+                <option value="year">This Year</option>
+              </select>
+              <button id="exportBtn" class="export-btn">
+                <i class="ri-download-2-line"></i> Export
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Date & Time</th>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="salesLogTable">
+              <!-- Table content will be populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button id="prevPage" disabled>Previous</button>
+          <span id="pageInfo">Page 1 of 1</span>
+          <button id="nextPage" disabled>Next</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="../js/reports.js"></script>
+  </body>
+</html>

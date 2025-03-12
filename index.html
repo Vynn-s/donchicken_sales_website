@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Chicken Store</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="theme-toggle">
+      <button id="themeToggle">🌙</button>
+    </div>
+    <div class="login-header">
+      <img src="assets/images/chicken-logo.png" alt="Chicken Store Logo" class="logo">
+      <h1>Welcome to the <b>Sales System</b></h1>
+      <p>Login to access your account</p>
+    </div>
+    <form id="loginForm" class="login-form">
+      <div id="loginMessage" class="messageDiv"></div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="login-button">Login</button>
+      <p class="create-account">Don't have an account? <a href="pages/create-account.html">Create an account</a></p>
+    </form>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

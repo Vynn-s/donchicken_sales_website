@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - Don Eking Chicken Store</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <img src="../assets/images/chicken-logo.png" class="logo" alt="Logo" />
+            <button id="menuToggle" class="menu-toggle">
+                <i class="ri-menu-line"></i>
+            </button>
+        </div>
+
+        <nav id="mainNav">
+            <ul>
+                <li><a href="home.html">Dashboard</a></li>
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="employees.html">Employees</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-right">
+            <div class="user-info">
+                <span id="currentDateTime"></span>
+                <span id="currentUser"></span>
+            </div>
+            <button id="themeToggle" class="theme-toggle">
+                <i class="ri-moon-line"></i>
+            </button>
+            <div class="user-profile">
+                <img src="../assets/images/client2.jpg" alt="User Profile" />
+            </div>
+        </div>
+    </header>
+
+    <main class="profile-container">
+        <div class="profile-header">
+            <h1>Account Settings</h1>
+            <p>Manage your account information and password</p>
+        </div>
+
+        <div class="profile-content">
+            <div class="profile-section">
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <img src="../assets/images/client2.jpg" alt="Profile Picture">
+                        <div class="upload-overlay">
+                            <i class="ri-camera-line"></i>
+                        </div>
+                    </div>
+                    <div class="info-details">
+                        <h2 id="userFullName">Loading...</h2>
+                        <p id="userEmail">Loading...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>Change Password</h3>
+                <form id="passwordForm" class="password-form">
+                    <div class="form-group">
+                        <label for="currentPassword">Current Password</label>
+                        <div class="password-input">
+                            <input type="password" id="currentPassword" required>
+                            <button type="button" class="toggle-password">
+                                <i class="ri-eye-line"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newPassword">New Password</label>
+                        <div class="password-input">
+                            <input type="password" id="newPassword" required>
+                            <button type="button" class="toggle-password">
+                                <i class="ri-eye-line"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm New Password</label>
+                        <div class="password-input">
+                            <input type="password" id="confirmPassword" required>
+                            <button type="button" class="toggle-password">
+                                <i class="ri-eye-line"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn">Update Password</button>
+                    </div>
+                </form>
+
+                <div class="logout-section">
+                    <h3>Session</h3>
+                    <a href="../index.html"><button id="logoutBtn" class="logout-btn">
+                        <i class="ri-logout-box-line"></i>
+                        Logout
+                    </button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <i class="ri-checkbox-circle-line success-icon"></i>
+            <h2>Success!</h2>
+            <p>Your password has been updated successfully.</p>
+        </div>
+    </div>
+
+    <script src="../js/profile.js"></script>
+</body>
+</html>

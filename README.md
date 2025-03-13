@@ -2,6 +2,35 @@
 
 A user-friendly system to manage Don Eking's Chicken Store's daily operations, including sales tracking and employee management.
 
+## Website Preview
+
+#### Login/Create Account
+![image alt](https://github.com/Vynn-s/donchicken_sales_website/blob/98584f81b49c62329d365f95cf5bf1f15f653bae/Figma%20-%20Don%20Eking%20Prototype/Create%20Account.png)
+![image alt](https://github.com/Vynn-s/donchicken_sales_website/blob/98584f81b49c62329d365f95cf5bf1f15f653bae/Figma%20-%20Don%20Eking%20Prototype/Login.png)
+
+
+#### Home Page
+![image alt](https://github.com/Vynn-s/donchicken_sales_website/blob/98584f81b49c62329d365f95cf5bf1f15f653bae/Figma%20-%20Don%20Eking%20Prototype/Home%20Page.png)
+
+#### Sales Page
+![image alt](https://github.com/Vynn-s/donchicken_sales_website/blob/98584f81b49c62329d365f95cf5bf1f15f653bae/Figma%20-%20Don%20Eking%20Prototype/Sales.png)
+
+![image alt](https://github.com/Vynn-s/donchicken_sales_website/blob/98584f81b49c62329d365f95cf5bf1f15f653bae/Figma%20-%20Don%20Eking%20Prototype/Add%20Custom%20Item%20Modal.png)
+![image alt](https://github.com/Vynn-s/donchicken_sales_website/blob/98584f81b49c62329d365f95cf5bf1f15f653bae/Figma%20-%20Don%20Eking%20Prototype/Item%20Added%20Successfully.png)
+
+#### Reports Page
+![image alt](https://github.com/Vynn-s/donchicken_sales_website/blob/98584f81b49c62329d365f95cf5bf1f15f653bae/Figma%20-%20Don%20Eking%20Prototype/Reports.png)
+
+#### Employee Page
+![image alt](https://github.com/Vynn-s/donchicken_sales_website/blob/98584f81b49c62329d365f95cf5bf1f15f653bae/Figma%20-%20Don%20Eking%20Prototype/Employees.png)
+![image alt](https://github.com/Vynn-s/donchicken_sales_website/blob/98584f81b49c62329d365f95cf5bf1f15f653bae/Figma%20-%20Don%20Eking%20Prototype/Add%20Employees.png)
+![image alt](https://github.com/Vynn-s/donchicken_sales_website/blob/98584f81b49c62329d365f95cf5bf1f15f653bae/Figma%20-%20Don%20Eking%20Prototype/Edit%20Employees.png)
+![image alt](https://github.com/Vynn-s/donchicken_sales_website/blob/98584f81b49c62329d365f95cf5bf1f15f653bae/Figma%20-%20Don%20Eking%20Prototype/Delete%20Employee.png)
+
+#### Account Page
+![image alt](https://github.com/Vynn-s/donchicken_sales_website/blob/98584f81b49c62329d365f95cf5bf1f15f653bae/Figma%20-%20Don%20Eking%20Prototype/Account.png)
+
+
 ## 🚀 Getting Started
 
 ### What You Need First:
